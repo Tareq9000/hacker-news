@@ -3,6 +3,7 @@ import Comment from './Comment';
 import Story from './Story';
 import { fetchAPI } from '../fetchAPI';
 import { connect } from 'react-redux';
+import styles from '../styles/style.module.css'
 
 export class StoryLog extends Component {
 
@@ -13,7 +14,7 @@ export class StoryLog extends Component {
   render() {
     const {getIdList} = this.props
     return (
-      <div id="log-box">
+      <div id={styles.log_box}>
         {getIdList.map(elem =>(
           <Story id={elem.id} />
         ))}

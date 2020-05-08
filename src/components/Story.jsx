@@ -3,6 +3,7 @@ import CommentLog from './CommentLog';
 import { fetchAPI } from '../fetchAPI'
 import { getLink, getLinkUrl, convertTime } from '../convertMethods'
 import { connect } from 'react-redux';
+import styles from '../styles/style.module.css';
 
 export class Story extends Component {
   
@@ -14,21 +15,21 @@ export class Story extends Component {
     const { showKids, showComment, url, linkUrl, score, by, time, kids, title, link, haveKids } = this.props
 
     return  by ? (
-      <div className="story-box">
-        <div className="story-title">
-          <a className="story-url story" href={url} target="_blank">{title}</a>
-          <a className="story-link story" href={linkUrl} target="_blank">{link}</a>
+      <div className={styles.story_box}>
+        <div className={styles.story_title}>
+          <a className={styles.story_url+' '+styles.story} href={url} target="_blank">{title}</a>
+          <a className={styles.story_link+' '+styles.story} href={linkUrl} target="_blank">{link}</a>
         </div>
-        <div className="story-score story">{score} points</div>
-        <div className="story-by story">by: {by}</div>
-        <div className="story-time story">{time}</div>
+        <div className={styles.story_score+' '+styles.story}>{score} points</div>
+        <div className={styles.story_by+' '+styles.story}>by: {by}</div>
+        <div className={styles.story_time+' '+styles.story}>{time}</div>
         {
           haveKids &&
-          <a className="show-comments" onClick={showKids}>{showComment ? <div>&#708;</div> : <div>&#709;</div>}</a>
+          <a className={styles.show_comments} onClick={showKids}>{showComment ? <div>&#708;</div> : <div>&#709;</div>}</a>
         }
         {
           showComment && (
-            <div className="kids-box">
+            <div className={styles.kids_box}>
               <CommentLog idComments={kids}/>
             </div>
           )

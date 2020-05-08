@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import StoryLog from './StoryLog';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinner-material';
+import styles from '../styles/style.module.css'
 
 export class App extends Component {
 
@@ -12,7 +13,7 @@ export class App extends Component {
       <div id="app-box">
           <h1>Hacker News</h1>
           <StoryLog />
-          <div className="spinner-box">
+          <div className={styles.spinner_box}>
             <Spinner 
               size={40} 
               spinnerColor={"black"} 

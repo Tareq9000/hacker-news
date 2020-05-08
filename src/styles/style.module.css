@@ -1,0 +1,98 @@
+h1 {
+  font-family: inherit;
+  color: rgb(97, 97, 97);
+}
+body{
+  text-align: center;
+  align-items: center;
+  font-family: Arial;
+}
+#log_box{
+  position: relative;
+  width: 60%;
+  left: 20%;
+  right: 20%;
+  text-align: left;
+}
+.story_box{ background-color: rgb(241, 241, 241);
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 
+    0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19), 
+    inset 0 6px 20px 0 rgba(56, 56, 56, 0.05);
+}
+.story{
+  display: inline-block;
+  position: relative;
+  margin-right: 7px; 
+  font-size: 12px;
+  margin-left: 10px;
+}
+.story_title{
+  display: block;
+}
+.story_url{
+  font-size: 16px;
+  margin-right: 0px;
+}
+.story_link{
+  font-size: 12px;
+  color: grey;
+  text-decoration: none;
+}
+.story_link:hover{
+  text-decoration: underline;
+}
+.story_by{
+  color: grey;
+  font-weight: bold;
+}
+.story_time{
+  color: grey;
+  font-weight: bold;
+}
+.story_score{
+  color: grey;
+  font-weight: bold;
+}
+.comment_text{
+  margin-top: 7px;
+  width: 95%;
+}
+.comment_box{
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-right: 1px;
+  margin-left: 15%;
+  border: 3px solid lightgrey;
+  box-shadow: 0 4px 8px 0 rgba(40, 40, 40, 0.01), 0 6px 20px 0 rgba(40, 40, 40, 0.1);
+}
+.show_comments{
+  position: relative;
+  display: block;
+  height: 25px;
+  margin-left: 10px;
+  margin-bottom: -2px;
+  padding-top: 15px;
+  margin-right: 10px;
+  font-size: 15px;
+  color: rgb(109, 109, 109);
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+}
+.show_comments:hover{
+  color: rgb(0, 0, 255);
+  text-decoration: underline;
+  font-size: 17px;
+}
+.spinner_box{
+  position: fixed;
+  top: 48%;
+  left: 48%;
+}
