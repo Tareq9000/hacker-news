@@ -5,7 +5,6 @@ import { storyReducer } from './reducers/storyReducer.js'
 import { commentReducer } from './reducers/commentReducer.js'
 import { Provider } from 'react-redux';
 import App from './components/App.jsx';
-// import './style.css';
 
 const store = createStore(combineReducers({storyReducer,commentReducer}))
 

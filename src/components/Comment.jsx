@@ -4,6 +4,7 @@ import { getLink, getLinkUrl, convertTime } from '../convertMethods'
 import { connect } from 'react-redux';
 import htmlToText from 'html-to-text';
 import CommentLog from './CommentLog';
+import styles from '../styles/style.module.css';
 
 export class Comment extends Component {
 
@@ -15,17 +16,17 @@ export class Comment extends Component {
     const { showKids, by, time, kids, text, haveKids, showComment } = this.props
 
     return by ? (
-      <div className="comment-box">
-        <div className="story-by story">by: {by}</div>
-        <div className="story-time story">{time}</div>
-        <div className="comment-text story">{text} points</div>
+      <div className={styles.comment_box}>
+        <div className={styles.story_by+' '+styles.story}>by: {by}</div>
+        <div className={styles.story_time+' '+styles.story}>{time}</div>
+        <div className={styles.comment_text+' '+styles.story}>{text} points</div>
         {
           haveKids &&
-          <a className="show-comments" onClick={showKids}>{showComment ? <div>&#708;</div> : <div>&#709;</div>}</a>
+          <a className={styles.show_comments} onClick={showKids}>{showComment ? <div>&#708;</div> : <div>&#709;</div>}</a>
         }
         {
           showComment && (
-            <div className="kids-box">
+            <div className={styles.kids_box}>
               <CommentLog idComments={kids}/>            
             </div>
           )
